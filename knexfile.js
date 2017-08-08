@@ -5,5 +5,10 @@ module.exports = {
   development: {
     client: 'pg',
     connection: 'postgress://localhost/pixel_quilt'
+  },
+
+  production: {
+    client: 'pg',
+    connection:process.env.DATABASE_URL
   }
 }
