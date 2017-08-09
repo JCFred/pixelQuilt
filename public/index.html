@@ -8,14 +8,37 @@
   </head>
   <body>
     <h1>Hello world</h1>
-    <div id="quilt"></div>
 
-    <form method="post" action="/updateRow">
+    <!-- <form method="post" action="/updateRow">
       <label>row #</label>
       <input type="number" name="row"/>
       <input type="text" name="pixelString"/>
       <input type="submit"/>
-    </form>
+    </form> -->
+
+    <div id="quilt"></div>
+
+    <div id="sectionModel">
+      <div class="modalHeader">
+        <h1 id="sectionId">0</h1>
+        <button id="closeModalBtn">Close</button>
+      </div>
+      <div class="modalBody">
+          <div class="modalBodyLeft">
+            <p>Selected Color</p>
+            <div id="selectedColor"></div>
+          </div>
+          <div id="patch"></div>
+          <div id="colorPalette"></div>
+      </div>
+      <div class="modelFooter">
+        <button id="undoBtn">Undo Changes</button>
+        <button id="sumbitPatch">Submit Changes</button>
+      </div>
+
+
+    </div>
+
 
     <script src="main.js"></script>
   </body>

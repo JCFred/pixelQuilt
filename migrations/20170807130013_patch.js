@@ -1,8 +1,7 @@
 
 exports.up = function(knex, Promise) {
   return knex.schema.createTable('patch', (table) => {
-    table.increments()
-    table.string('row_0')
+    table.integer('id')
     table.string('row_1')
     table.string('row_2')
     table.string('row_3')
@@ -18,6 +17,23 @@ exports.up = function(knex, Promise) {
     table.string('row_13')
     table.string('row_14')
     table.string('row_15')
+    table.string('row_16')
+    table.string('row_17')
+    table.string('row_18')
+    table.string('row_19')
+    table.string('row_20')
+    table.string('row_21')
+    table.string('row_22')
+    table.string('row_23')
+    table.string('row_24')
+    table.string('row_25')
+    table.string('row_26')
+    table.string('row_27')
+    table.string('row_28')
+    table.string('row_29')
+    table.string('row_30')
+    table.string('row_31')
+    table.string('row_32')
   })
 };
 

@@ -14,15 +14,22 @@ app.get('/', (req, res) => {
   res.render('index');
 })
 
-app.get('/data', (req, res) => {
-  query.getPatch()
+app.get('/quilt', (req, res) => {
+  query.getQuilt()
   .then(data => {
     res.json(data)
   })
 })
 
-app.post('/updateRow', (req, res) => {
-  query.updateRow(req.body)
+app.get('/patch/:id', (req, res) => {
+  query.getPatch(req.params.id)
+  .then(data => {
+    res.json(data)
+  })
+})
+
+app.post('/updatePatch/:id', (req, res) => {
+  query.updatePatch({id: req.params.id, data: req.body})
   .then(function() {
     res.redirect('/');
   })
