@@ -48,8 +48,8 @@ function updatePatch(obj) {
 
 function updatePatchPostman(obj) {
   let patchId = obj.id
-  console.log(patchId)
-  let temp = JSON.parse(obj.data.json)
+  console.log(obj)
+  let temp = obj.data.json
   let data = temp.packagedData
   console.log("data:")
   console.log(data)
