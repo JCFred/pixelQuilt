@@ -59,7 +59,7 @@ $(document).ready(function(){
 
   //submit the edited patch to the database
   $('#sumbitPatch').click(function() {
-    let dbId = selectedSection.id +1
+    let dbId = +selectedSection.id +1
     let packagedData = pack(selectedPatchDB);
     PostObjectToUrl('/updatePatch/' + dbId, {packagedData})
   })

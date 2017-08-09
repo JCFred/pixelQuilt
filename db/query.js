@@ -6,6 +6,7 @@ function getQuilt() {
 
 function updatePatch(obj) {
   let patchId = obj.id
+  console.log(patchId)
   let temp = JSON.parse(obj.data.json)
   let data = temp.packagedData
   console.log(patchId)
