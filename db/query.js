@@ -48,10 +48,10 @@ function updatePatch(obj) {
 
 function updatePatchPostman(obj) {
   let patchId = obj.id
-  console.log(obj)
+  console.log(obj.data)
   let data = obj.data.json
-  console.log("data:")
-  console.log(data)
+  //console.log("data:")
+  //console.log(data)
   return pg('patch').where('id', patchId).update({
     'row_1': data.row_1,
     'row_2': data.row_2,
