@@ -35,4 +35,12 @@ app.post('/updatePatch/:id', (req, res) => {
   })
 })
 
+app.post('/updatePatchPostman/:id', (req, res) => {
+  console.log(req.body)
+  query.updatePatchPostman({id: req.params.id, data: req.body})
+  .then(function() {
+    res.redirect('/');
+  })
+})
+
 app.listen(port, console.log('listening on ' + port))
