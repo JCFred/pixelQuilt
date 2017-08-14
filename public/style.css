@@ -1,14 +1,34 @@
+@font-face {
+  font-family: "pixelCowboy";
+  src: url("./fonts/pixelCowboy.otf")
+}
+
+html {
+  background: grey;
+}
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "pixelCowboy";
+  font-size: .05em;
+}
+
+h1 {
+  margin: 3px;
+  font-size:1.2em;
+}
+p {
+  /*margin:3px;*/
+  font-size:.75em;
 }
 
 #quilt {
+
   width:512px;
   height:512px;
   border:black solid 1px;
-  margin-top: 20px;
+  margin-top: 3px;
 
   display:flex;
   flex-wrap: wrap;
@@ -40,13 +60,13 @@ body {
   flex-direction: column;
   align-items: center;
   position: absolute;
-  left:25vw;
+  left:0vw;
   top:15vw
 }
 .modalHeader {
-  width: 80%;
+  width: 95%;
   height:45px;
-  margin:20px;
+  margin-top:20px;
 
   display: flex;
   justify-content: space-between;
@@ -55,7 +75,7 @@ body {
   margin-top: 2px;
 }
 .modalBody {
-  width:90%;
+  width:95%;
 
   display:flex;
   justify-content: space-around;
@@ -84,6 +104,11 @@ body {
   justify-content: flex-start;
   flex-direction: column;
 }
+.modalFooter {
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+}
 #selectedColor {
   width:50px;
   height:50px;
@@ -107,8 +132,14 @@ body {
 .patchPixel:hover {
   opacity: .5;
 }
+.modalBtn {
+  height:40px;
+}
 
 @media (min-width: 768px) {
+  body {
+    font-size: 1em;
+  }
   #quilt {
     width:1024px;
     height:1024px;
@@ -122,5 +153,10 @@ body {
   .section {
     width:128px;
     height:128px;
+  }
+
+  #sectionModel {
+    left:25vw;
+    top:15vw
   }
 }

@@ -7,7 +7,7 @@ $(document).ready(function(){
   var selectedPatchDB = [];
   const colorArr = ["G","Y","R","B","V","O","W","E","L"];
   var sectionModel = document.getElementById('sectionModel');
-  var sectionId = document.getElementById('sectionId')
+  var sectionId = 1;
   var SelectedColor = "rgb(255, 255, 255)";
   var selectedSection = 0;
 
@@ -21,14 +21,16 @@ $(document).ready(function(){
   //display the selected patch in the modal window and set the sected array
   quilt.click(function(event) {
     selectedSection = event.target.parentElement
-    sectionId.textContent = selectedSection.id;
-    sectionModel.style.display = 'flex';
-    patch.empty();
-    selectedPatchDB = copyPatch(quiltDB[selectedSection.id])
-    SelectedColor = "rgb(255, 255, 255)";
-    changeSelectedColor(SelectedColor);
-    fillPatch(quiltDB[selectedSection.id])
-    console.log(selectedSection.id)
+    if(selectedSection.className === "section") {
+      sectionId = selectedSection.id;
+      $("#sectionId").text(+sectionId +1)
+      sectionModel.style.display = 'flex';
+      patch.empty();
+      selectedPatchDB = copyPatch(quiltDB[selectedSection.id])
+      SelectedColor = "rgb(255, 255, 255)";
+      changeSelectedColor(SelectedColor);
+      fillPatch(quiltDB[selectedSection.id])
+    }
   })
 
   //hide the modal window

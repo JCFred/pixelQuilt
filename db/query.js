@@ -41,7 +41,7 @@ function updatePatch(obj) {
     'row_28': data.row_28,
     'row_29': data.row_29,
     'row_30': data.row_30,
-    'row_32': data.row_31,
+    'row_31': data.row_31,
     'row_32': data.row_32
   })
 }
