@@ -246,7 +246,7 @@ function getColor(char){
       return "rgb(240, 238, 77)"
       break;
     case "N":
-      return "rgb(139,69,19)"
+      return "rgb(139, 69, 19)"
       break;
     case "O":
       return "rgb(255, 255, 255)"
@@ -306,7 +306,7 @@ function getChar(color){
     case "rgb(240, 238, 77)":
       return "M"
       break;
-    case "rgb(139,69,19)":
+    case "rgb(139, 69, 19)":
       return "N"
       break;
     case "rgb(255, 255, 255)":
