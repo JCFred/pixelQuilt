@@ -5,7 +5,7 @@ $(document).ready(function(){
   var patch = $("#patch");
   var quiltDB = [];
   var selectedPatchDB = [];
-  const colorArr = ["G","Y","R","B","V","O","W","E","L"];
+  const colorArr = ["A","B","C","D","P","F","G","H","I", "J", "K", "L", "M", "N", "O", "E", "Q", "R"];
   var sectionModel = document.getElementById('sectionModel');
   var sectionId = 1;
   var SelectedColor = "rgb(255, 255, 255)";
@@ -206,31 +206,58 @@ $(document).ready(function(){
   //return color from character
 function getColor(char){
   switch(char){
-    case "G":
-      return "rgb(37, 156, 35)"
-      break;
-    case "Y":
-      return "rgb(240, 238, 77)"
-      break;
-    case "R":
-      return "rgb(244, 38, 24)"
+    case "A":
+      return "rgb(36, 122, 35)"
       break;
     case "B":
+      return "rgb(48, 191, 46)"
+      break;
+    case "C":
+      return "rgb(38, 158, 140)"
+      break;
+    case "D":
+      return "rgb(32, 89, 136)"
+      break;
+    case "P":
       return "rgb(55, 171, 228)"
       break;
-    case "V":
-      return "rgb(131, 1, 201)"
+    case "F":
+      return "rgb(131, 0, 220)"
       break;
-    case "O":
+    case "G":
+      return "rgb(172, 15, 95)"
+      break;
+    case "H":
+      return "rgb(244, 38, 24)"
+      break;
+    case "I":
+      return "rgb(233, 103, 29)"
+      break;
+    case "J":
       return "rgb(242, 146, 33)"
       break;
-    case "W":
+    case "K":
+      return "rgb(255, 120, 233)"
+      break;
+    case "L":
+      return "rgb(255, 205, 148)"
+      break;
+    case "M":
+      return "rgb(240, 238, 77)"
+      break;
+    case "N":
+      return "rgb(139,69,19)"
+      break;
+    case "O":
       return "rgb(255, 255, 255)"
       break;
     case "E":
-      return "rgb(152, 152, 152)"
+      return "rgb(212, 212, 212)"
       break;
-    case "L":
+    case "Q":
+      return "rgb(134, 134, 134)"
+      break;
+    case "R":
       return "rgb(0, 0, 0)"
       break;
     default:
@@ -240,34 +267,61 @@ function getColor(char){
 
 function getChar(color){
   switch(color){
-    case "rgb(37, 156, 35)":
-      return "G"
+    case "rgb(36, 122, 35)":
+      return "A"
       break;
-    case "rgb(240, 238, 77)":
-      return "Y"
-      break;
-    case "rgb(244, 38, 24)":
-      return "R"
-      break;
-    case "rgb(55, 171, 228)":
+    case "rgb(48, 191, 46)":
       return "B"
       break;
-    case "rgb(131, 1, 201)":
-      return "V"
+    case "rgb(38, 158, 140)":
+      return "C"
+      break;
+    case "rgb(32, 89, 136)":
+      return "D"
+      break;
+    case "rgb(55, 171, 228)":
+      return "P"
+      break;
+    case "rgb(131, 0, 220)":
+      return "F"
+      break;
+    case "rgb(172, 15, 95)":
+      return "G"
+      break;
+    case "rgb(244, 38, 24)":
+      return "H"
+      break;
+    case "rgb(233, 103, 29)":
+      return "I"
       break;
     case "rgb(242, 146, 33)":
-      return "O"
+      return "J"
       break;
-    case "rgb(255, 255, 255)":
-      return "W"
+    case "rgb(255, 120, 233)":
+      return "K"
       break;
-    case "rgb(152, 152, 152)":
-      return "E"
-      break;
-    case "rgb(0, 0, 0)":
+    case "rgb(255, 205, 148)":
       return "L"
       break;
+    case "rgb(240, 238, 77)":
+      return "M"
+      break;
+    case "rgb(139,69,19)":
+      return "N"
+      break;
+    case "rgb(255, 255, 255)":
+      return "O"
+      break;
+    case "rgb(212, 212, 212)":
+      return "E"
+      break;
+    case "rgb(134, 134, 134)":
+      return "Q"
+      break;
+    case "rgb(0, 0, 0)":
+      return "R"
+      break;
     default:
-      return "W"
+      return "O";
   }
 }
